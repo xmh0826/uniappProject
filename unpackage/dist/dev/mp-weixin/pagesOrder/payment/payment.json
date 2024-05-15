@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "xtx-guess": "../../components/XtxGuess/XtxGuess"
+  }
+}
