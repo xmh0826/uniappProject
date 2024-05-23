@@ -3,9 +3,6 @@ const common_vendor = require("../../../../common/vendor.js");
 const services_order = require("../../../../services/order.js");
 const services_constants = require("../../../../services/constants.js");
 const services_pay = require("../../../../services/pay.js");
-require("../../../../utils/http.js");
-require("../../../../stores/index.js");
-require("../../../../stores/modules/member.js");
 const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "OrderList",
   props: {

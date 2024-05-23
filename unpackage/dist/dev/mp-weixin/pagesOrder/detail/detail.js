@@ -4,9 +4,6 @@ const composables_index = require("../../composables/index.js");
 const services_order = require("../../services/order.js");
 const services_constants = require("../../services/constants.js");
 const services_pay = require("../../services/pay.js");
-require("../../utils/http.js");
-require("../../stores/index.js");
-require("../../stores/modules/member.js");
 if (!Array) {
   const _easycom_uni_countdown2 = common_vendor.resolveComponent("uni-countdown");
   const _easycom_XtxGuess2 = common_vendor.resolveComponent("XtxGuess");

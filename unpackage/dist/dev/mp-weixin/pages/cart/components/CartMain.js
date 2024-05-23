@@ -4,7 +4,6 @@ const services_cart = require("../../../services/cart.js");
 require("../../../stores/index.js");
 const composables_index = require("../../../composables/index.js");
 const stores_modules_member = require("../../../stores/modules/member.js");
-require("../../../utils/http.js");
 if (!Array) {
   const _easycom_vk_data_input_number_box2 = common_vendor.resolveComponent("vk-data-input-number-box");
   const _easycom_uni_swipe_action_item2 = common_vendor.resolveComponent("uni-swipe-action-item");

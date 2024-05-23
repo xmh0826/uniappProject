@@ -3,9 +3,6 @@ const common_vendor = require("../../common/vendor.js");
 const services_goods = require("../../services/goods.js");
 const services_cart = require("../../services/cart.js");
 const services_address = require("../../services/address.js");
-require("../../utils/http.js");
-require("../../stores/index.js");
-require("../../stores/modules/member.js");
 if (!Array) {
   const _easycom_vk_data_goods_sku_popup2 = common_vendor.resolveComponent("vk-data-goods-sku-popup");
   const _easycom_uni_popup2 = common_vendor.resolveComponent("uni-popup");

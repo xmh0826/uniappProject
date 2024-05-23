@@ -2,9 +2,6 @@
 const common_vendor = require("../../common/vendor.js");
 const services_index = require("../../services/index.js");
 const composables_index = require("../../composables/index.js");
-require("../../utils/http.js");
-require("../../stores/index.js");
-require("../../stores/modules/member.js");
 if (!Array) {
   const _easycom_CustomNavber2 = common_vendor.resolveComponent("CustomNavber");
   const _easycom_XtxSwiper2 = common_vendor.resolveComponent("XtxSwiper");

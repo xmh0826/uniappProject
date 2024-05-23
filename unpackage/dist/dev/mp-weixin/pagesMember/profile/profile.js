@@ -3,7 +3,6 @@ const common_vendor = require("../../common/vendor.js");
 const services_profile = require("../../services/profile.js");
 require("../../stores/index.js");
 const stores_modules_member = require("../../stores/modules/member.js");
-require("../../utils/http.js");
 const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "profile",
   setup(__props) {
@@ -12,6 +11,8 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const getMemberProfileData = async () => {
       const res = await services_profile.getMemberProfileAPI();
       profile.value = res.result;
+      console.log(profile.value);
+      console.log(profile.value.fullLocation);
     };
     common_vendor.onLoad(() => {
       getMemberProfileData();
@@ -50,7 +51,9 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       });
     };
     const onGenderChange = (e) => {
+      console.log(e.detail.value);
       profile.value.gender = e.detail.value;
+      console.log(profile.value.gender);
     };
     const onBirthdayChange = (e) => {
       console.log(e.detail.value);
@@ -90,33 +93,32 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       common_vendor.index.navigateBack();
     };
     return (_ctx, _cache) => {
-      var _a;
+      var _a, _b, _c;
       return common_vendor.e({
         a: ((_a = common_vendor.unref(safeAreaInsets)) == null ? void 0 : _a.top) + "px",
         b: profile.value.avatar,
         c: common_vendor.o(onAvatarChange),
-        d: common_vendor.t(profile.value.accout),
+        d: common_vendor.t(profile.value.account),
         e: profile.value.nickname,
         f: common_vendor.o(($event) => profile.value.nickname = $event.detail.value),
-        g: common_vendor.t(profile.value.gender),
-        h: profile.value.gender === "男",
+        g: ((_b = profile.value) == null ? void 0 : _b.gender) === "男",
+        h: ((_c = profile.value) == null ? void 0 : _c.gender) === "女",
         i: common_vendor.o(onGenderChange),
-        j: profile.value.gender === "女",
-        k: profile.value.birthday
+        j: profile.value.birthday
       }, profile.value.birthday ? {
-        l: common_vendor.t(profile.value.birthday)
+        k: common_vendor.t(profile.value.birthday)
       } : {}, {
-        m: /* @__PURE__ */ new Date(),
-        n: profile.value.birthday,
-        o: common_vendor.o(onBirthdayChange),
-        p: profile.value.fullLocation
+        l: /* @__PURE__ */ new Date(),
+        m: profile.value.birthday,
+        n: common_vendor.o(onBirthdayChange),
+        o: profile.value.fullLocation
       }, profile.value.fullLocation ? {
-        q: common_vendor.t(profile.value.fullLocation)
+        p: common_vendor.t(profile.value.fullLocation)
       } : {}, {
-        r: profile.value.fullLocation.split(" "),
-        s: common_vendor.o(onFullLocationChange),
-        t: profile.value.profession,
-        v: common_vendor.o(onSubmit)
+        q: profile.value.fullLocation.split(" "),
+        r: common_vendor.o(onFullLocationChange),
+        s: profile.value.profession,
+        t: common_vendor.o(onSubmit)
       });
     };
   }

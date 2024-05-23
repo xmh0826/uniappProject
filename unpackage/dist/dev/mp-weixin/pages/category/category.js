@@ -2,9 +2,6 @@
 const common_vendor = require("../../common/vendor.js");
 const services_index = require("../../services/index.js");
 const services_category = require("../../services/category.js");
-require("../../utils/http.js");
-require("../../stores/index.js");
-require("../../stores/modules/member.js");
 if (!Array) {
   const _easycom_XtxSwiper2 = common_vendor.resolveComponent("XtxSwiper");
   _easycom_XtxSwiper2();

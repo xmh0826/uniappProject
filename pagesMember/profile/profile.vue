@@ -12,6 +12,8 @@
 	const getMemberProfileData = async () => {
 		const res = await getMemberProfileAPI()
 		profile.value = res.result
+		console.log(profile.value)
+		console.log(profile.value.fullLocation)
 	}
 
 	onLoad(() => {
@@ -64,7 +66,9 @@
 	}
 	// 修改性别
 	const onGenderChange = (e) => {
+		console.log(e.detail.value)
 		profile.value.gender = e.detail.value
+		console.log(profile.value.gender)
 	}
 	// 修改生日
 	const onBirthdayChange = (e) => {
@@ -133,21 +137,21 @@
 			<view class="form-content">
 				<view class="form-item">
 					<text class="label">账号</text>
-					<text class="account"> {{ profile.accout }}</text>
+					<text class="account"> {{ profile.account }}</text>
 				</view>
 				<view class="form-item">
 					<text class="label"> 昵称 </text>
 					<input class="input" type="text" placeholder="请填写昵称" v-model="profile.nickname" />
 				</view>
 				<view class="form-item">
-					<text class="label">{{ profile.gender }}</text>
-					<radio-group>
-						<label class="radio" @change="onGenderChange">
-							<radio value="男" color="#27ba9b" :checked="profile.gender === '男'" />
+					<text class="label">性别</text>
+					<radio-group @change="onGenderChange">
+						<label class="radio">
+							<radio value="男" color="#27ba9b" :checked="profile?.gender === '男'" />
 							男
 						</label>
 						<label class="radio">
-							<radio value="女" color="#27ba9b" :checked="profile.gender === '女'" />
+							<radio value="女" color="#27ba9b" :checked="profile?.gender === '女'" />
 							女
 						</label>
 					</radio-group>

@@ -1,9 +1,6 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const services_index = require("../../services/index.js");
-require("../../utils/http.js");
-require("../../stores/index.js");
-require("../../stores/modules/member.js");
 const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "XtxGuess",
   setup(__props, { expose: __expose }) {
